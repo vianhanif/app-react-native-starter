@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Content, Header, Left, Body, Button, Icon, Title, Text } from 'native-base'
-import * as Actions from '../actions'
+import { Container, Content, Button, Text } from 'native-base'
+import Header from '../../components/Header'
+import * as Actions from '../../actions'
 
 export default class App extends React.Component {
 
@@ -32,21 +33,11 @@ export default class App extends React.Component {
   render() {
     return (
       <Container>
-        <Header>
-          <Left>
-            <Button transparent
-            onPress={() => this.props.navigation.navigate("DrawerOpen")}>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-        </Header>
+        <Header title='Home Page' {...this.props}/>
         <Content padder>
           <Button
             onPress={() => this.handleActionSheet()}>
-            <Text>Actionsheet</Text>
+            <Text>Actionsheet {this.state.action}</Text>
           </Button>
         </Content>
       </Container>

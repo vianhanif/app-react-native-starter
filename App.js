@@ -2,28 +2,9 @@ import React from 'react';
 import { Root, StyleProvider } from 'native-base'
 import getTheme from './native-base-theme/components'
 import material from './native-base-theme/variables/material'
-import { DrawerNavigator } from 'react-navigation'
-import { AppLoading, Asset, Font } from 'expo'
-import MainPage from './pages/App'
-
-const AppNavigator = DrawerNavigator({
-  MainPage: { screen: MainPage }
-})
-
-function cacheImages(images) {
-  return images.map(image => {
-    if (typeof image === 'string') {
-      return Image.prefetch(image);
-    } else {
-      return Asset.fromModule(image).downloadAsync();
-    }
-  });
-}
-
-function cacheFonts(fonts) {
-  return fonts.map(font => Font.loadAsync(font));
-}
-
+import Navigator from './navigator'
+import { AppLoading } from 'expo'
+import assetConfig from './config/assets'
 
 export default class App extends React.Component {
 
@@ -31,24 +12,11 @@ export default class App extends React.Component {
     isReady: false
   }
 
-  async _loadAssetsAsync() {
-    const imageAssets = cacheImages([]);
-
-    const fontAssets = cacheFonts([
-      {
-        'Roboto': require('native-base/Fonts/Roboto.ttf'),
-        'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf')
-      }
-    ]);
-
-    await Promise.all([...imageAssets, ...fontAssets]);
-  }
-
   render() {
     if (!this.state.isReady) {
       return (
         <AppLoading
-          startAsync={this._loadAssetsAsync}
+          startAsync={assetConfig}
           onFinish={() => this.setState({ isReady: true })}
           onError={console.warn}
         />
@@ -57,7 +25,7 @@ export default class App extends React.Component {
       return (
         <StyleProvider style={getTheme(material)}>
           <Root>
-            <AppNavigator/>
+            <Navigator/>
           </Root>
         </StyleProvider>
       );
