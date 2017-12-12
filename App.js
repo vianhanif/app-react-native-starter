@@ -1,10 +1,10 @@
 import React from 'react';
 import { Root, StyleProvider } from 'native-base'
-import getTheme from './native-base-theme/components'
-import material from './native-base-theme/variables/material'
-import Navigator from './navigator'
+import getTheme from 'native-base-theme/components'
+import material from 'native-base-theme/variables/material'
+import Navigator from 'navigator'
 import { AppLoading } from 'expo'
-import assetConfig from './config/assets'
+import config from 'config'
 
 export default class App extends React.Component {
 
@@ -16,7 +16,7 @@ export default class App extends React.Component {
     if (!this.state.isReady) {
       return (
         <AppLoading
-          startAsync={assetConfig}
+          startAsync={config.assetLoader}
           onFinish={() => this.setState({ isReady: true })}
           onError={console.warn}
         />

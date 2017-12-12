@@ -1,5 +1,4 @@
 import { Asset, Image, Font } from 'expo'
-import Config from './index'
 
 function cacheImages(images) {
   return images.map(image => {
@@ -16,10 +15,10 @@ function cacheFonts(fonts) {
 }
 
 
-async function loadAssetsAsync () {
-  const imageAssets = cacheImages(Config.Asset.Images);
+async function loadAssetsAsync (Asset) {
+  const imageAssets = cacheImages(Asset.Images);
 
-  const fontAssets = cacheFonts(Config.Asset.Fonts);
+  const fontAssets = cacheFonts(Asset.Fonts);
 
   await Promise.all([...imageAssets, ...fontAssets]);
 }

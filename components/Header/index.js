@@ -13,7 +13,7 @@ export default class App extends React.Component {
       <Header>
         <Left style={{flex: 0.2}}>
           <Button transparent
-          onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+          onPress={() => this.props.navigation.navigate('DrawerOpen')}>
             <Icon name='menu' />
           </Button>
         </Left>

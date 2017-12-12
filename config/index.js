@@ -1,4 +1,6 @@
-export default {
+import assetLoader from './assets'
+
+const config = {
   Asset: {
     Fonts: [
       {
@@ -7,5 +9,12 @@ export default {
       }
     ],
     Images: []
+  }
+}
+
+export default {
+  ...config,
+  assetLoader () {
+    return assetLoader(config.Asset)
   }
 }

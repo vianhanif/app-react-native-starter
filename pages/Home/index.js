@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Content, Button, Text } from 'native-base'
-import Header from '../../components/Header'
-import * as Actions from '../../actions'
+import Header from 'components/Header'
+import * as Actions from 'actions'
 
 export default class App extends React.Component {
 
