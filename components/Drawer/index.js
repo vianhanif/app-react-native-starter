@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image } from 'react-native'
 import { Container, Content, Text, List, ListItem } from 'native-base';
+import { Actions } from 'react-native-router-flux'
 
 export default class Drawer extends React.Component {
 
@@ -29,7 +30,7 @@ export default class Drawer extends React.Component {
               return (
                 <ListItem
                   button
-                  onPress={() => this.props.navigation.navigate(data)}>
+                  onPress={() => Actions[data]()}>
                   <Text>{data}</Text>
                 </ListItem>
               );
