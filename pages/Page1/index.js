@@ -12,7 +12,7 @@ export default class App extends React.Component {
   render () {
     return (
       <Container>
-        <Header {...this.props}/>
+        <Header drawer/>
         <Content>
           <Text>Page 1</Text>
         </Content>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Root, StyleProvider } from 'native-base'
 import getTheme from 'native-base-theme/components'
-import material from 'native-base-theme/variables/material'
 import Navigator from 'navigator'
 import { AppLoading } from 'expo'
 import config from 'config'
@@ -23,7 +22,7 @@ export default class App extends React.Component {
       );
     } else {
       return (
-        <StyleProvider style={getTheme(material)}>
+        <StyleProvider style={getTheme(config.baseTheme)}>
           <Root>
             <Navigator/>
           </Root>

@@ -11,7 +11,8 @@
                 "config": "./config",
                 "native-base-theme": "./native-base-theme",
                 "navigator": "./navigator",
-                "pages": "./pages"
+                "pages": "./pages",
+                "assets": "./assets"
               }
             }
           ]

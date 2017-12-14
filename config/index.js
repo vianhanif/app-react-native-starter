@@ -1,6 +1,8 @@
 import assetLoader from './assets'
+import baseTheme from 'native-base-theme/variables/material'
 
 const config = {
+  baseTheme,
   Asset: {
     Fonts: [
       {

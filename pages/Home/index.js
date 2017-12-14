@@ -3,8 +3,13 @@ import { Container, Content, Button, Text } from 'native-base'
 import Header from 'components/Header'
 import FooterTab from 'components/FooterTab'
 import * as Actions from 'actions'
+import { Routes } from 'navigator'
 
-export default class App extends React.Component {
+export default class HomeApp extends React.Component {
+
+  static navigationOptions = (props) => ({
+    drawerLockMode: Routes.Home.props.drawerLockMode
+  })
 
   constructor (props) {
     super(props)
@@ -34,7 +39,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Container>
-        <Header {...this.props}/>
+        <Header searchBar searchBarleftIcon rightButton rounded/>
         <Content padder>
           <Button
             onPress={() => this.handleActionSheet()}>
