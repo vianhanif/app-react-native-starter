@@ -2,8 +2,9 @@ import React from 'react';
 import { Image } from 'react-native'
 import { Container, Content, Text, List, ListItem } from 'native-base';
 import { Actions } from 'react-native-router-flux'
+import { Routes } from 'navigator'
 
-export default class Drawer extends React.Component {
+export default class App extends React.Component {
 
   constructor (props) {
     super(props)
@@ -25,13 +26,13 @@ export default class Drawer extends React.Component {
             }}>
           </Image>
           <List
-            dataArray={this.props.routes}
-            renderRow={data => {
+            dataArray={Object.keys(Routes)}
+            renderRow={routeName => {
               return (
                 <ListItem
                   button
-                  onPress={() => Actions[data]()}>
-                  <Text>{data}</Text>
+                  onPress={() => Actions[routeName]()}>
+                  <Text>{Routes[routeName].title}</Text>
                 </ListItem>
               );
             }}

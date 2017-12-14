@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Content, Button, Text } from 'native-base'
 import Header from 'components/Header'
+import FooterTab from 'components/FooterTab'
 import * as Actions from 'actions'
 
 export default class App extends React.Component {
@@ -33,13 +34,14 @@ export default class App extends React.Component {
   render() {
     return (
       <Container>
-        <Header title='Home Page' {...this.props}/>
+        <Header {...this.props}/>
         <Content padder>
           <Button
             onPress={() => this.handleActionSheet()}>
             <Text>Actionsheet {this.state.action}</Text>
           </Button>
         </Content>
+        <FooterTab/>
       </Container>
     );
   }

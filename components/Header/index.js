@@ -1,5 +1,7 @@
 import React from 'react';
 import { Header, Left, Body, Button, Icon, Title } from 'native-base'
+import { Routes } from 'navigator'
+import { Actions } from 'react-native-router-flux'
 
 export default class App extends React.Component {
 
@@ -8,17 +10,16 @@ export default class App extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <Header>
         <Left style={{flex: 0.2}}>
           <Button transparent
-          onPress={() => this.props.navigation.navigate('DrawerOpen')}>
+          onPress={() => Actions.drawerOpen() }>
             <Icon name='menu' />
           </Button>
         </Left>
         <Body>
-          <Title>{this.props.title}</Title>
+          <Title>{Routes[Actions.currentScene.replace('_', '')].title}</Title>
         </Body>
       </Header>
     );

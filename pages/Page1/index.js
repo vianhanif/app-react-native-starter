@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Content, Text } from 'native-base'
 import Header from 'components/Header'
+import FooterTab from 'components/FooterTab'
 
 export default class App extends React.Component {
 
@@ -11,10 +12,11 @@ export default class App extends React.Component {
   render () {
     return (
       <Container>
-        <Header title='Page 1' {...this.props}/>
+        <Header {...this.props}/>
         <Content>
           <Text>Page 1</Text>
         </Content>
+        <FooterTab/>
       </Container>
     )
   }
