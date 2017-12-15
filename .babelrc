@@ -7,12 +7,12 @@
         ["module-resolver",{
               "root": ["./"],
               "alias": {
-                "components": "./components",
-                "config": "./config",
+                "components": "./src/components",
+                "config": "./src/config",
                 "native-base-theme": "./native-base-theme",
-                "navigator": "./navigator",
-                "pages": "./pages",
-                "assets": "./assets"
+                "navigator": "./src/navigator",
+                "pages": "./src/pages",
+                "assets": "./src/assets"
               }
             }
           ]
