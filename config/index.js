@@ -22,7 +22,16 @@ const config = {
       }
     ],
     Images: [
-      require('assets/icons/akun.png')
+      require('assets/icons/icon_agen.png'),
+      require('assets/icons/icon_agen_green.png'),
+      require('assets/icons/icon_home.png'),
+      require('assets/icons/icon_home_green.png'),
+      require('assets/icons/icon_pesanan.png'),
+      require('assets/icons/icon_pesanan_green.png'),
+      require('assets/icons/icon_profil.png'),
+      require('assets/icons/icon_profil_green.png'),
+      require('assets/icons/icon_voucher.png'),
+      require('assets/icons/icon_voucher_green.png')
     ]
   }
 }

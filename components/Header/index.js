@@ -11,25 +11,25 @@ export default class HeaderApp extends React.Component {
   }
 
   renderAsSearchBar() {
-    return this.props.searchBar || this.props.searchBarleftIcon || this.props.searchBarRightIcon || this.props.searchBarBothIcon
+    return this.props.searchBar || this.props.searchBarLeftIcon || this.props.searchBarRightIcon || this.props.searchBarBothIcon
   }
 
   shouldRenderSearchBar() {
     if (this.renderAsSearchBar()) {
       return (
-        <Item>
+        <Item style={styles.input.container}>
           {(() => {
-            if (this.props.searchBarleftIcon || this.props.searchBarBothIcon) {
+            if (this.props.searchBarLeftIcon || this.props.searchBarBothIcon) {
               return (
-                <GeneralIcon customStyle={styles.barIcon} type={this.props.searchLeftIcon.type} name={this.props.searchLeftIcon.name} />
+                <GeneralIcon customStyle={styles.barIcon} {...this.props.searchLeftIcon} />
               )
             }
           })()}
-          <Input placeholder={this.props.placeholder} />
+          <Input placeholder={this.props.placeholder} placeholderTextColor={styles.placeholderColor} style={styles.input.text} />
             {(() => {
               if (this.props.searchBarRightIcon || this.props.searchBarBothIcon) {
                 return (
-                  <GeneralIcon customStyle={styles.barIcon} type={this.props.searchRightIcon.type} name={this.props.searchRightIcon.name} />
+                  <GeneralIcon customStyle={styles.barIcon} {...this.props.searchRightIcon} />
                 )
               }
             })()}
@@ -43,7 +43,7 @@ export default class HeaderApp extends React.Component {
     if (this.props.rightButton) {
       return (
         <Button transparent>
-          <GeneralIcon customStyle={styles.barButton} type={this.props.rightButtonIcon.type} name={this.props.rightButtonIcon.name} />
+          <GeneralIcon customStyle={styles.barButton} {...this.props.rightButtonIcon} />
         </Button>
       )
     }
@@ -77,7 +77,7 @@ export default class HeaderApp extends React.Component {
 
   render() {
     return (
-      <Header {...this.props}>
+      <Header style={styles.container} {...this.props}>
         {this.shouldRenderSearchBar()}
         {this.shouldRenderSearchBarRightButton()}
         {this.shouldRenderDrawerButton()}
@@ -104,14 +104,29 @@ HeaderApp.defaultProps = {
 }
 
 const styles = {
+  container: {
+    backgroundColor: '#00c853',
+    borderBottomWidth: 0
+  },
+  placeholderColor: '#bdbdbd',
+  input: {
+    container: {
+      marginRight: 10
+    },
+    text: {
+      fontSize: 13,
+      color: '#424242'
+    }
+  },
   barIcon: {
     fontSize: 20,
     paddingLeft: 8,
     paddingRight: 8,
-    color: '#3f51b5'
+    color: '#bdbdbd'
   },
   barButton: {
-    fontSize: 20,
-    color: 'white'
+    fontSize: 24,
+    color: 'white',
+    marginRight: 10
   }
 }

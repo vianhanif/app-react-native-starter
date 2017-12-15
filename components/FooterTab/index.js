@@ -19,15 +19,15 @@ export default class BottomTab extends Component {
 
   render() {
     return (
-      <FooterTab>
+      <FooterTab style={styles.container}>
         {Object.keys(Routes).map((routeName, index) => {
           return (
             <Button active={this.isActive(routeName)} key={index} onPress={() => Actions[routeName]()}>
               <Icon
                 customStyle={this.isActive(routeName) ? styles.active : styles.base }
-                {...Routes[routeName].icon}
+                {...{...Routes[routeName].icon, source: (this.isActive(routeName) ? Routes[routeName].icon.activated : Routes[routeName].icon.source)}}
               />
-              <Text>{routeName}</Text>
+            <Text style={{...styles.button, ...(this.isActive(routeName) ? styles.active : styles.base)}}>{Routes[routeName].title}</Text>
             </Button>
           )
         })}
@@ -37,12 +37,23 @@ export default class BottomTab extends Component {
 }
 
 const styles = {
+  container: {
+    backgroundColor: 'white'
+  },
+  button: {
+    paddingLeft: 0,
+    paddingRight: 0,
+    color: '#424242',
+    marginTop: 1,
+    fontSize: 12
+  },
   base: {
-    color: 'white',
-    opacity: .8
+    opacity: .8,
   },
   active: {
-    color: 'white',
-    opacity: 1.0
+    color: '#00c853',
+    fontSize: 13,
+    marginTop: 2,
+    opacity: 1.0,
   }
 }
