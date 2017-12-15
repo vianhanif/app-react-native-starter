@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Content, Text } from 'native-base'
+import { Container, Content, Text, Footer } from 'native-base'
 import Header from 'components/Header'
 import FooterTab from 'components/FooterTab'
 
@@ -16,7 +16,9 @@ export default class App extends React.Component {
         <Content>
           <Text>Page 1</Text>
         </Content>
-        <FooterTab/>
+        <Footer>
+          <FooterTab/>
+        </Footer>
       </Container>
     )
   }

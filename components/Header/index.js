@@ -107,7 +107,8 @@ const styles = {
   barIcon: {
     fontSize: 20,
     paddingLeft: 8,
-    paddingRight: 8
+    paddingRight: 8,
+    color: '#3f51b5'
   },
   barButton: {
     fontSize: 20,

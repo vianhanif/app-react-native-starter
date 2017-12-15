@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Content, Button, Text } from 'native-base'
+import { Container, Content, Button, Text, Footer } from 'native-base'
 import Header from 'components/Header'
 import FooterTab from 'components/FooterTab'
 import * as Actions from 'actions'
@@ -39,14 +39,16 @@ export default class HomeApp extends React.Component {
   render() {
     return (
       <Container>
-        <Header searchBar searchBarleftIcon rightButton rounded/>
+        <Header searchBar searchBarRightIcon rightButton rounded/>
         <Content padder>
           <Button
             onPress={() => this.handleActionSheet()}>
             <Text>Actionsheet {this.state.action}</Text>
           </Button>
         </Content>
-        <FooterTab/>
+        <Footer>
+          <FooterTab/>
+        </Footer>
       </Container>
     );
   }

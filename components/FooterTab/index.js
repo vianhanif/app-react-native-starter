@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { FooterTab, Footer, Button, Text } from 'native-base'
+import { FooterTab, Button, Text } from 'native-base'
 import Icon from 'components/Icon'
 import { Actions } from 'react-native-router-flux'
 import { Routes } from 'navigator'
@@ -19,22 +19,20 @@ export default class BottomTab extends Component {
 
   render() {
     return (
-      <Footer style={styles.container}>
-        <FooterTab>
-          {Object.keys(Routes).map((routeName, index) => {
-            return (
-              <Button active={this.isActive(routeName)} key={index} onPress={() => Actions[routeName]()}>
-                <Icon
-                  customStyle={this.isActive(routeName) ? styles.active : styles.base }
-                  type={Routes[routeName].icon.type}
-                  name={Routes[routeName].icon.name}
-                />
-                <Text>{routeName}</Text>
-              </Button>
-            )
-          })}
-        </FooterTab>
-      </Footer>
+      <FooterTab>
+        {Object.keys(Routes).map((routeName, index) => {
+          return (
+            <Button active={this.isActive(routeName)} key={index} onPress={() => Actions[routeName]()}>
+              <Icon
+                customStyle={this.isActive(routeName) ? styles.active : styles.base }
+                type={Routes[routeName].icon.type}
+                name={Routes[routeName].icon.name}
+              />
+              <Text>{routeName}</Text>
+            </Button>
+          )
+        })}
+      </FooterTab>
     );
   }
 }
