@@ -19,8 +19,12 @@ export const Routes = {
   'About': {
     props: {},
     icon: {
-      type: 'MaterialIcons',
-      name: 'person'
+      type: 'Image',
+      source: require('assets/icons/akun.png'),
+      customStyle: {
+        width: 32,
+        height: 32
+      }
     },
     title: 'About Page',
     screen: Page1

@@ -25,8 +25,7 @@ export default class BottomTab extends Component {
             <Button active={this.isActive(routeName)} key={index} onPress={() => Actions[routeName]()}>
               <Icon
                 customStyle={this.isActive(routeName) ? styles.active : styles.base }
-                type={Routes[routeName].icon.type}
-                name={Routes[routeName].icon.name}
+                {...Routes[routeName].icon}
               />
               <Text>{routeName}</Text>
             </Button>
