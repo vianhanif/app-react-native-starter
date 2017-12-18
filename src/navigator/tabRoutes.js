@@ -1,4 +1,4 @@
-import { Actions } from 'react-native-router-flux'
+import { Actions } from 'navigation-router'
 
 const style = {
   icon: {

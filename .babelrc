@@ -12,7 +12,8 @@
                 "native-base-theme": "./native-base-theme",
                 "navigator": "./src/navigator",
                 "pages": "./src/pages",
-                "assets": "./src/assets"
+                "assets": "./src/assets",
+                "navigation-router": "react-native-router-flux"
               }
             }
           ]

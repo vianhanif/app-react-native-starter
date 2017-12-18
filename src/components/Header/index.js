@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Left, Body, Button, Title, Icon, Input, Item } from 'native-base'
 import { Routes } from 'navigator'
-import { Actions } from 'react-native-router-flux'
+import { Actions } from 'navigation-router'
 import GeneralIcon from 'components/Icon'
 
 export default class HeaderApp extends React.Component {

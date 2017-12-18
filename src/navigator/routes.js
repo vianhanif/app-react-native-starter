@@ -3,7 +3,7 @@ import PesananApp from 'pages/Pesanan'
 import AkunApp from 'pages/Akun'
 import VoucherApp from 'pages/Voucher'
 import KategoriApp from 'pages/Kategori'
-import { Actions } from 'react-native-router-flux'
+import { Actions } from 'navigation-router'
 
 const style = {
   icon: {
