@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { FooterTab, Button, Text } from 'native-base'
-import Icon from 'components/Icon'
+import GeneralIcon from 'components/Icon'
 import { Actions } from 'react-native-router-flux'
 import { Routes } from 'navigator'
 
@@ -21,15 +21,19 @@ export default class BottomTab extends Component {
     return (
       <FooterTab style={styles.container}>
         {Object.keys(Routes).map((routeName, index) => {
-          return (
-            <Button active={this.isActive(routeName)} key={index} onPress={() => Actions[routeName]()}>
-              <Icon
-                customStyle={this.isActive(routeName) ? styles.active : styles.base }
-                {...{...Routes[routeName].icon, source: (this.isActive(routeName) ? Routes[routeName].icon.activated : Routes[routeName].icon.source)}}
-              />
-            <Text style={{...styles.button, ...(this.isActive(routeName) ? styles.active : styles.base)}}>{Routes[routeName].title}</Text>
-            </Button>
-          )
+          if (Routes[routeName].showFooter) {
+            return (
+              <Button active={this.isActive(routeName)} key={index} onPress={() => Routes[routeName].handler()}>
+                <GeneralIcon
+                  customStyle={this.isActive(routeName) ? styles.active : styles.base }
+                  {...{...Routes[routeName].icon, source: (this.isActive(routeName) ? Routes[routeName].icon.activated : Routes[routeName].icon.source)}}
+                />
+              <Text style={{...styles.button, ...(this.isActive(routeName) ? styles.active : styles.base)}}>{Routes[routeName].title}</Text>
+              </Button>
+            )
+          } else {
+            return null
+          }
         })}
       </FooterTab>
     );
@@ -38,7 +42,14 @@ export default class BottomTab extends Component {
 
 const styles = {
   container: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    shadowOffset: {
+      height: -2,
+      width: 0
+    },
+    shadowColor: 'black',
+    shadowRadius: 2,
+    shadowOpacity: .1
   },
   button: {
     paddingLeft: 0,

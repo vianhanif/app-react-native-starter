@@ -22,8 +22,7 @@ export default class AkunApp extends React.Component {
           rightButtonIcon={{
             type: 'MaterialCommunityIcons',
             name: 'cart-outline'
-          }}
-        />
+          }}/>
         <Content>
           <Text>Belanja Page</Text>
         </Content>

@@ -2,12 +2,13 @@ import React from 'react';
 import { Container, Content, Text, Footer } from 'native-base'
 import Header from 'components/Header'
 import FooterTab from 'components/FooterTab'
+import Tabs from 'components/Tab'
 import { Routes } from 'navigator'
 
-export default class PesananApp extends React.Component {
+export default class KategoriApp extends React.Component {
 
   static navigationOptions = (props) => ({
-    drawerLockMode: Routes.PesananApp.props.drawerLockMode
+    drawerLockMode: Routes.KategoriApp.props.drawerLockMode
   })
 
   constructor (props) {
@@ -23,8 +24,9 @@ export default class PesananApp extends React.Component {
             type: 'MaterialCommunityIcons',
             name: 'cart-outline'
           }}/>
+        <Tabs/>
         <Content>
-          <Text>Pesanan Page</Text>
+          <Text>Kategori Page</Text>
         </Content>
         <Footer>
           <FooterTab/>

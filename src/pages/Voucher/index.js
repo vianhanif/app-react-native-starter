@@ -22,8 +22,7 @@ export default class VoucherApp extends React.Component {
           rightButtonIcon={{
             type: 'MaterialCommunityIcons',
             name: 'cart-outline'
-          }}
-        />
+          }}/>
         <Content>
           <Text>Voucher Page</Text>
         </Content>

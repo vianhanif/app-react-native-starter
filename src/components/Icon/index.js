@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { Image } from 'react-native'
+import { View, Image } from 'react-native'
 import {
   Entypo,
   EvilIcons,
@@ -58,7 +58,11 @@ export default class GeneralIcon extends Component {
           delete customStyle.color
           delete imageStyle.color
           delete imageStyle.fontSize
-          return <Image fadeDuration={0} style={{...imageStyle, ...customStyle}} {...props}>{props.children}</Image>
+          return (
+            <View style={{justifyContent: 'center', alignItems: 'center'}}>
+              <Image fadeDuration={0} style={{...imageStyle, ...customStyle}} {...props}>{props.children}</Image>
+            </View>
+          )
     }
   }
 }

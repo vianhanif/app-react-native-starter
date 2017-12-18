@@ -106,7 +106,8 @@ HeaderApp.defaultProps = {
 const styles = {
   container: {
     backgroundColor: '#00c853',
-    borderBottomWidth: 0
+    borderBottomWidth: 0,
+    elevation: 0
   },
   placeholderColor: '#bdbdbd',
   input: {
