@@ -1,9 +1,9 @@
 import React from 'react';
 import { Root, StyleProvider } from 'native-base'
-import getTheme from 'native-base-theme/components'
-import Navigator from 'navigator'
+import getTheme from './native-base-theme/components'
+import Navigator from './src/navigator'
 import { AppLoading } from 'expo'
-import config from 'config'
+import config from './src/config'
 
 export default class App extends React.Component {
 

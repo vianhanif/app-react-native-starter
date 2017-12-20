@@ -1,6 +1,6 @@
 import React from 'react'
-import DefaultDrawer from 'components/Drawer'
-import { Router, Scene, Drawer, Stack } from 'navigation-router'
+import DefaultDrawer from '../components/Drawer'
+import { Router, Scene, Drawer, Stack } from 'react-native-router-flux'
 
 export const TabRoutes = require('./tabRoutes').default
 

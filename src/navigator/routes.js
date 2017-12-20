@@ -1,9 +1,9 @@
-import BelanjaApp from 'pages/Belanja'
-import PesananApp from 'pages/Pesanan'
-import AkunApp from 'pages/Akun'
-import VoucherApp from 'pages/Voucher'
-import KategoriApp from 'pages/Kategori'
-import { Actions } from 'navigation-router'
+import BelanjaApp from '../pages/Belanja'
+import PesananApp from '../pages/Pesanan'
+import AkunApp from '../pages/Akun'
+import VoucherApp from '../pages/Voucher'
+import KategoriApp from '../pages/Kategori'
+import { Actions } from 'react-native-router-flux'
 
 const style = {
   icon: {
@@ -21,8 +21,8 @@ export default {
     showFooter: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/icon_home.png'),
-      activated: require('assets/icons/icon_home_green.png'),
+      source: require('../assets/icons/icon_home.png'),
+      activated: require('../assets/icons/icon_home_green.png'),
       customStyle: style.icon
     },
     title: 'Belanja',
@@ -38,8 +38,8 @@ export default {
     showFooter: false,
     icon: {
       type: 'Image',
-      source: require('assets/icons/kategori.png'),
-      activated: require('assets/icons/kategori_aktif.png'),
+      source: require('../assets/icons/kategori.png'),
+      activated: require('../assets/icons/kategori_aktif.png'),
       customStyle: style.icon
     },
     title: 'Kategori',
@@ -55,8 +55,8 @@ export default {
     showFooter: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/icon_pesanan.png'),
-      activated: require('assets/icons/icon_pesanan_green.png'),
+      source: require('../assets/icons/icon_pesanan.png'),
+      activated: require('../assets/icons/icon_pesanan_green.png'),
       customStyle: style.icon
     },
     title: 'Pesanan',
@@ -72,8 +72,8 @@ export default {
     showFooter: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/icon_profil.png'),
-      activated: require('assets/icons/icon_profil_green.png'),
+      source: require('../assets/icons/icon_profil.png'),
+      activated: require('../assets/icons/icon_profil_green.png'),
       customStyle: style.icon
     },
     title: 'Akun',
@@ -89,8 +89,8 @@ export default {
     showFooter: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/icon_voucher.png'),
-      activated: require('assets/icons/icon_voucher_green.png'),
+      source: require('../assets/icons/icon_voucher.png'),
+      activated: require('../assets/icons/icon_voucher_green.png'),
       customStyle: style.icon
     },
     title: 'Voucher',

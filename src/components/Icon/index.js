@@ -15,8 +15,8 @@ import {
   Zocial,
   SimpleLineIcons
 } from '@expo/vector-icons'
-import config from 'config'
-import getIconStyle from 'native-base-theme/components/Icon'
+import config from '../../config'
+import getIconStyle from '../../../native-base-theme/components/Icon'
 
 export default class GeneralIcon extends Component {
 

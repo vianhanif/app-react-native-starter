@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image } from 'react-native'
 import { Container, Content, Text, List, ListItem } from 'native-base';
-import { Actions } from 'navigation-router'
-import { Routes } from 'navigator'
+import { Actions } from 'react-native-router-flux'
+import { Routes } from '../../navigator'
 
 export default class App extends React.Component {
 

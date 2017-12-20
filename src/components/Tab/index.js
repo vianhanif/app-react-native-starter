@@ -1,9 +1,9 @@
 /* @flow */
 
 import React, { Component } from 'react';
-import { TabRoutes } from 'navigator'
-import { Actions } from 'navigation-router'
-import GeneralIcon from 'components/Icon'
+import { TabRoutes } from '../../navigator'
+import { Actions } from 'react-native-router-flux'
+import GeneralIcon from '../Icon'
 import { View, Text, TouchableOpacity } from 'react-native'
 
 export default class TabsApp extends Component {

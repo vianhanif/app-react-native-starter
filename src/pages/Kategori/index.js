@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Content, Text, Footer } from 'native-base'
-import Header from 'components/Header'
-import FooterTab from 'components/FooterTab'
-import Tabs from 'components/Tab'
-import { Routes } from 'navigator'
+import Header from '../../components/Header'
+import FooterTab from '../../components/FooterTab'
+import Tabs from '../../components/Tab'
+import { Routes } from '../../navigator'
 
 export default class KategoriApp extends React.Component {
 

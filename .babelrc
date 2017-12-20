@@ -3,21 +3,7 @@
   "env": {
     "development": {
       "plugins": [
-        "transform-react-jsx-source",
-        ["module-resolver",{
-              "root": ["./"],
-              "alias": {
-                "components": "./src/components",
-                "config": "./src/config",
-                "native-base-theme": "./native-base-theme",
-                "navigator": "./src/navigator",
-                "pages": "./src/pages",
-                "assets": "./src/assets",
-                "navigation-router": "react-native-router-flux"
-              }
-            }
-          ]
-      ]
+        "transform-react-jsx-source"]
     }
   }
 }

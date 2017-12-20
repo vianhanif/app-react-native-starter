@@ -1,4 +1,4 @@
-import { Actions } from 'navigation-router'
+import { Actions } from 'react-native-router-flux'
 
 const style = {
   icon: {
@@ -14,8 +14,8 @@ export default {
     showTab: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/belanja_inactive.png'),
-      activated: require('assets/icons/belanja.png'),
+      source: require('../assets/icons/belanja_inactive.png'),
+      activated: require('../assets/icons/belanja.png'),
       customStyle: style.icon
     },
     handler() {
@@ -27,8 +27,8 @@ export default {
     showTab: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/kategori.png'),
-      activated: require('assets/icons/kategori_aktif.png'),
+      source: require('../assets/icons/kategori.png'),
+      activated: require('../assets/icons/kategori_aktif.png'),
       customStyle: style.icon
     },
     handler() {
@@ -40,8 +40,8 @@ export default {
     showTab: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/m_pay_icon.png'),
-      activated: require('assets/icons/m_pay_icon.png'),
+      source: require('../assets/icons/m_pay_icon.png'),
+      activated: require('../assets/icons/m_pay_icon.png'),
       customStyle: style.icon
     },
     handler() {}
@@ -51,8 +51,8 @@ export default {
     showTab: true,
     icon: {
       type: 'Image',
-      source: require('assets/icons/ngobrol_icon.png'),
-      activated: require('assets/icons/ngobrol_icon.png'),
+      source: require('../assets/icons/ngobrol_icon.png'),
+      activated: require('../assets/icons/ngobrol_icon.png'),
       customStyle: style.icon
     },
     handler() {}

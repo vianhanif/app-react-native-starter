@@ -2,9 +2,9 @@
 
 import React, { Component } from 'react';
 import { FooterTab, Button, Text } from 'native-base'
-import GeneralIcon from 'components/Icon'
-import { Actions } from 'navigation-router'
-import { Routes } from 'navigator'
+import GeneralIcon from '../Icon'
+import { Actions } from 'react-native-router-flux'
+import { Routes } from '../../navigator'
 
 export default class BottomTab extends Component {
 

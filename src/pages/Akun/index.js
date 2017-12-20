@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Content, Text, Footer } from 'native-base'
-import Header from 'components/Header'
-import FooterTab from 'components/FooterTab'
-import { Routes } from 'navigator'
+import Header from '../../components/Header'
+import FooterTab from '../../components/FooterTab'
+import { Routes } from '../../navigator'
 
 export default class AkunApp extends React.Component {
 
